@@ -20,11 +20,44 @@
 /data/tmp/*.cache
 /data/tmp/emblems
 
+# Sensitive local configuration
+/.env
+/.env.*
+!/\.env.example
+/config/application.php
+/config/servers.php
+/config/*.local.php
+/config/*.secret.php
+/config/*secret*
+/config/*private*
+
+# Secrets, keys and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.csr
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# Local backups that may contain credentials
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*~
+
 # Non-Default Themes
 /themes/*
 !/themes/default
 !/themes/bootstrap
 !/themes/installer
+!/themes/retro
 
 # Import Configs
 /config/import

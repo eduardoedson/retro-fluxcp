@@ -1,0 +1,21 @@
+.tos-list {
+    list-style: none;
+    counter-reset: list-counter;
+    padding-left: 0;
+}
+
+.tos-list .tos-list-item {
+    counter-increment: list-counter;
+    position: relative;
+    padding-left: 2.2rem;
+    margin-bottom: .75rem;
+}
+
+.tos-list .tos-list-item::before {
+    content: counter(list-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    color: var(--retro-blue);
+}

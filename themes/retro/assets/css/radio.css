@@ -1,0 +1,63 @@
+label:has(> input[type="radio"]) {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+    line-height: 1;
+}
+
+label:has(> input[type="radio"]) > input[type="radio"] {
+    all: unset;
+    box-sizing: border-box;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+
+    display: inline-block;
+    flex: 0 0 auto;
+
+    border: 2px solid #9ca3af;
+    background: #ffffff;
+
+    cursor: pointer;
+    position: relative;
+
+    transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+label:has(> input[type="radio"]) > input[type="radio"]::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: 999px;
+    background: #2563eb;
+    transform: scale(0);
+    transition: transform 150ms ease;
+}
+
+label:has(> input[type="radio"]):hover > input[type="radio"] {
+    border-color: #2563eb;
+    transform: scale(1.03);
+}
+
+label:has(> input[type="radio"]:checked) {
+    color: #2563eb;
+}
+
+label:has(> input[type="radio"]:checked) > input[type="radio"] {
+    border-color: #2563eb;
+}
+
+label:has(> input[type="radio"]:checked) > input[type="radio"]::after {
+    transform: scale(1);
+}
+
+label:has(> input[type="radio"]:focus-visible) > input[type="radio"] {
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
